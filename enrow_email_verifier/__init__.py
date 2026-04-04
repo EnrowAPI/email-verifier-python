@@ -25,10 +25,13 @@ def _request(api_key: str, method: str, path: str, body: Optional[Dict[str, Any]
 def verify_email(
     api_key: str,
     email: str,
+    custom: Optional[str] = None,
     webhook: Optional[str] = None,
 ) -> Dict[str, Any]:
     """Start a single email verification. Returns a dict with an 'id' to poll for results."""
     body: Dict[str, Any] = {"email": email}
+    if custom:
+        body["custom"] = custom
     if webhook:
         body["settings"] = {"webhook": webhook}
     return _request(api_key, "POST", "/email/verify/single", body)
@@ -42,12 +45,15 @@ def get_verification_result(api_key: str, id: str) -> Dict[str, Any]:
 def verify_emails(
     api_key: str,
     emails: List[str],
+    custom: Optional[str] = None,
     webhook: Optional[str] = None,
 ) -> Dict[str, Any]:
     """Start a bulk email verification. Returns a dict with a 'batchId' to poll for results."""
     body: Dict[str, Any] = {
-        "verifications": [{"email": email} for email in emails],
+        "emails": emails,
     }
+    if custom:
+        body["custom"] = custom
     if webhook:
         body["settings"] = {"webhook": webhook}
     return _request(api_key, "POST", "/email/verify/bulk", body)
