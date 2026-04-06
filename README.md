@@ -80,7 +80,7 @@ Each verification costs **0.25 credits**. Paid plans start at **$17/mo** up to *
 ## Documentation
 
 - [Enrow API documentation](https://docs.enrow.io)
-- [Full Enrow SDK](https://github.com/EnrowAPI/enrow-python) -- includes email finder, phone finder, reverse email lookup, and more
+- [Full Enrow SDK](https://github.com/EnrowAPI/enrow-python) -- includes email finder, phone finderand more
 
 ## License
 
