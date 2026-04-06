@@ -29,9 +29,8 @@ verification = verify_email(
 
 result = get_verification_result("your_api_key", verification["id"])
 
+print(result["email"])          # tcook@apple.com
 print(result["qualification"])  # valid
-print(result["isDeliverable"])  # True
-print(result["isCatchAll"])     # False
 ```
 
 `verify_email` returns a verification ID. The verification runs asynchronously -- call `get_verification_result` to retrieve the result once it's ready. You can also pass a `webhook` URL to get notified automatically.
