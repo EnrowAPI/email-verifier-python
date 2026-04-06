@@ -2,6 +2,8 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/email-verifier.svg)](https://pypi.org/project/email-verifier/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/EnrowAPI/email-verifier-python)](https://github.com/EnrowAPI/email-verifier-python)
+[![Last commit](https://img.shields.io/github/last-commit/EnrowAPI/email-verifier-python)](https://github.com/EnrowAPI/email-verifier-python/commits)
 
 Verify email addresses for deliverability, catch-all detection, and inbox status. Clean your email lists before sending to reduce bounces and protect your sender reputation.
 
@@ -79,7 +81,7 @@ Each verification costs **0.25 credits**. Paid plans start at **$17/mo** up to *
 ## Documentation
 
 - [Enrow API documentation](https://docs.enrow.io)
-- [Full Enrow SDK](https://github.com/enrow/enrow-python) -- includes email finder, phone finder, reverse email lookup, and more
+- [Full Enrow SDK](https://github.com/EnrowAPI/enrow-python) -- includes email finder, phone finder, reverse email lookup, and more
 
 ## License
 
